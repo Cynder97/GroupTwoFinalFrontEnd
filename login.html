@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Log In For Song</title>
+        <script src="scripts/login.js"></script>
+    </head>
+    <h1>Login</h1>
+    <body>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="enrolled.html">Enrolled Courses</a>
+            <a href="unenroll.html">Unenroll from Courses</a>
+            <a href="signup.html">Sing Up</a>
+            <a href="add_class.html">Add Course</a>
+            <a href="delete_class.html">Delete Course</a>
+            <button id="logout" style="float: right">Logout</button>
+        </nav>
+        <form id="login" autocomplete="off">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username">
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="text" id="password">
+            </div>
+            <button id="loginBtn" type="button">Login</button>
+            <p id="errMsg"></p>
+        </form>
+        <p>Don't have an account? <a href="registration.html">Click here!</a></p>
+
+        <button id="statusBtn">Display Status</button>
+
+    </body> 
+    </html>
