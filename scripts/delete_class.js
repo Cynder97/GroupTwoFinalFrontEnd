@@ -1,29 +1,29 @@
 addEventListener("DOMContentLoaded", async function(){
-    document.querySelector("#deletebtn").addEventListener("click", deleteSong);
-    getAllSongs()
+    document.querySelector("#deletebtn").addEventListener("click", deleteCourse);
+    getAllCourses()
 })
 
-async function getAllSongs(){
-    const response = await fetch("https://yummy-numerous-muscle.glitch.me/api/songs")
+async function getAllCourses(){
+    const response = await fetch("https://therapeutic-roan-raven.glitch.me/api/courses")
     if(response.ok){
-        const songs = await response.json()
+        const courses = await response.json()
         let html = ""
-        for(let song of songs){
-            html += `<option value="${song._id}">${song.title}</option>`
+        for(let course of courses){
+            html += `<option value="${course._id}">${course.title}</option>`
         }
-        document.querySelector("#songDropDown").innerHTML = html
+        document.querySelector("#courseDropDown").innerHTML = html
     }
 }
 
-async function deleteSong(){
-    const songID = document.querySelector("#songDropDown option:ckecked").value
-    const response = await fetch("https://yummy-numerous-muscle.glitch.me/api/songs/" + songID, {
+async function deleteCourse(){
+    const courseID = document.querySelector("#courseDropDown option:ckecked").value
+    const response = await fetch("https://therapeutic-roan-raven.glitch.me/api/courses/" + courseID, {
         method: "DELETE"
     }) 
     if(response.ok){
-        getAllSongs()
+        getAllCourses()
     }
     else{
-        document.querySelector("error").innerHTML = "Cannot delete song"
+        document.querySelector("error").innerHTML = "Cannot delete course"
     }
 }
