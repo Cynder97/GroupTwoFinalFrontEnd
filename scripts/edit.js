@@ -4,7 +4,7 @@ addEventListener("DOMContentLoaded", async function(){
     document.querySelector("updatebttn").addEventListener("click", updateCourse)
     const urlparam = new URLSearchParams(window.location.search)
     const courseDataBaseID = urlparam.get('id')
-    const response = await fetch("" + courseDataBaseID)
+    const response = await fetch("https://therapeutic-roan-raven.glitch.me" + courseDataBaseID)
     if(response.ok){
         let course = await response.json()
         document.querySelector("#courseDatabaseId").value = course._id
@@ -28,7 +28,7 @@ async function updateCourse(){
         endDate: document.querySelector("#endDate").value,
         description: document.querySelector("#description").value
     }
-    const response = await fetch("" + courseDataBaseID,{
+    const response = await fetch("https://therapeutic-roan-raven.glitch.me" + courseDataBaseID,{
         method: "PUT",
         headers: {"Content-Type" : "application/json"},
     body: JSON.stringify(course)
