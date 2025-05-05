@@ -3,7 +3,7 @@ addEventListener("DOMContentLoaded", async function(){
     const courseDatabaseID = urlparam.get("id")
     console.log(courseDatabaseID)
 
-    const response = await fetch("" + courseDatabaseID)
+    const response = await fetch("https://therapeutic-roan-raven.glitch.me" + courseDatabaseID)
     const course = await response.json()
     console.log(course)
 
