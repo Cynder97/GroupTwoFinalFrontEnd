@@ -9,4 +9,8 @@ addEventListener("DOMContentLoaded", async function(){
     }
 
     document.querySelector("#list_of_enrolled_courses").innerHTML = html
+
+    document.querySelector("#logout").onclick = function() {
+      window.location.href = "/login.html";
+    };
 })
