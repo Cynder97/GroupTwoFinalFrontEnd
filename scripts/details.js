@@ -9,7 +9,7 @@ addEventListener("DOMContentLoaded", async function(){
 
     let heading = ""
     heading += `Welcome to the ${course.title} page`
-    document.querySelector("h1").innerHTML = heading
+    document.querySelector("#header").innerHTML = heading
 
     let html = ""
     html += `
@@ -17,5 +17,5 @@ addEventListener("DOMContentLoaded", async function(){
     <h3>Instructor - ${course.instructor}</h3>
     <h3>Description - ${course.description}</h3>
     `
-    document.querySelector("div").innerHTML = html
+    document.querySelector("#description").innerHTML = html
 })
