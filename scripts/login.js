@@ -1,7 +1,7 @@
 let token
 
 window.onload=function(){
-document.querySelector("loginBtn").addEventListener("click",function(){
+document.querySelector("#loginBtn").addEventListener("click",function(){
     const username = document.querySelector("#username").value
     const password = document.querySelector("#password").value
     login(username,password)
@@ -12,7 +12,7 @@ async function login(username,password){
         username,
         password
     }
-    const response = await fetch("", {
+    const response = await fetch("https://yummy-numerous-muscle.glitch.me/api/auth/", {
         method: "POST",
         headers:{
             "Content-Type" : "application/json"
@@ -33,6 +33,6 @@ async function login(username,password){
         window.location.replace("index.html")
     }
     else{
-        document.querySelector("errorMsg").innerHTML = "Incorrect Username or Password"
+        document.querySelector("#errorMsg").innerHTML = "Incorrect Username or Password"
     }
 }
