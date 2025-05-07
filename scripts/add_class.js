@@ -12,7 +12,7 @@ async function addSong(){
         description: document.querySelector("#description").value
     }
 
-    const response = await fetch("https://therapeutic-roan-raven.glitch.me", {
+    const response = await fetch("https://therapeutic-roan-raven.glitch.me/api/courses", {
         method: "POST",
         headers:{
             "Content-Type" : "application/json"
