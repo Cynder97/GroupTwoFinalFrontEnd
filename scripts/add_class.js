@@ -1,9 +1,9 @@
 addEventListener("DOMContentLoaded", function(){
-    document.querySelector("#addBtn").addEventListener("click", addSong)
+    document.querySelector("#addBtn").addEventListener("click", addCourse)
 })
 //Grabs the data from the form in add_class.html and sends to the database
-async function addSong(){
-    const song = {
+async function addCourse(){
+    const course = {
         title: document.querySelector("#title").value,
         courseID: document.querySelector("#courseID").value,
         instructor: document.querySelector("#instructor").value,
@@ -17,7 +17,7 @@ async function addSong(){
         headers:{
             "Content-Type" : "application/json"
         },
-        body: JSON.stringify(song)
+        body: JSON.stringify(course)
     })
 
     if(response.ok){
