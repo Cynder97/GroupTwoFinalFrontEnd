@@ -18,7 +18,7 @@ addEventListener("DOMContentLoaded", async function(){
 })
 //Sends the updated data to the database
 async function updateCourse(){
-    const courseDataBaseID = document.querySelector("#courseDataBaseId").value
+    const courseDataBaseID = document.querySelector("#courseDatabaseId").value
     const course = {
         _id: document.querySelector("#courseDatabaseId").value,
         title: document.querySelector("#title").value,
