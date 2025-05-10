@@ -1,7 +1,7 @@
 //Grabs the data from the form in edit.html
 //Need to get backend setup so the links can be placed properly
 addEventListener("DOMContentLoaded", async function(){
-    document.querySelector("updatebttn").addEventListener("click", updateCourse)
+    document.querySelector("#updatebttn").addEventListener("click", updateCourse)
     const urlparam = new URLSearchParams(window.location.search)
     const courseDataBaseID = urlparam.get('id')
     const response = await fetch("https://therapeutic-roan-raven.glitch.me" + courseDataBaseID)
